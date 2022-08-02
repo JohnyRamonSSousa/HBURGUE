@@ -26,46 +26,49 @@
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
 </head>
 
-<body>
-    <header id="header">
-        <a href="payment.html#home"><img src="assets/images/logo-mobile.svg" alt="Logo Hburger" class="logo-mobile" /><img src="assets/images/logo-desktop.svg" alt="Logo Hburger" class="logo-desktop" /></a>
+<body class="app-body">
+    <header id="header-pay">
+        <a href="index.html#home" class="logo" aria-label="logotido da empresa"></a>
+        <img class="img-user" src="assets/images/profile.svg" alt="">
     </header>
 
-    <div class="pay">
-        <h1>Pagamento</h1>
-    </div>
-    <main id="payment">
-        <form>
+    <main class="payment">
+        <div >
+            <h1>Pagamento</h1>
+        </div>
+        <section>
+            <form method="post">                
+                <div class="field">
+                    <label for="card number"></label>
+                    <input id="card number" type="number" name="card number" placeholder="Número do cartão" required >
+                </div>
+                <div class="field">
+                    <label for="validity"></label>
+                    <input id="validity" type="number" name="validity" placeholder="Validade" required >
+                </div>
+                <div class="pay-field">
+                    <label for="security code"></label>
+                    <input id="security code" type="number" name="security code" placeholder="Código de Segurança" required >
+                </div>
+                <div class="pay-field-1">
+                    <label for="name"></label>
+                    <input id="name" type="text" name="name" placeholder="Nome" required >
+                </div>
+                <div class="field">
+                    <label for="Emitting bank"></label>
+                    <input id="Emitting bank" type="text" name="Emitting bank" placeholder="Banco Emissor" required >
+                </div>
+                <div class="field">
+                    <label for="installments"></label>
+                    <input id="installments" type="number" name="installments" placeholder="Parcelas" required >
+                </div>
 
-            <div class="field">
-                <label for="card number">Número do cartão</label>
-                <input id="card number" type="number" name="card number" placeholder="Número do cartão" required >
-            </div>
-            <div class="field">
-                <label for="validity">Validade</label>
-                <input id="validity" type="number" name="validity" placeholder="Validade" required >
-            </div>
-            <div class="field">
-                <label for="security code">Código de Segurança</label>
-                <input id="security code" type="number" name="security code" placeholder="Código de Segurança" required >
-            </div>
-            <div class="field">
-                <label for="name">Nome</label>
-                <input id="name" type="text" name="name" placeholder="Nome" required >
-            </div>
-            <div class="field">
-                <label for="Emitting bank">Banco Emissor</label>
-                <input id="Emitting bank" type="text" name="Emitting bank" placeholder="Banco Emissor" required >
-            </div>
-            <div class="field">
-                <label for="installments">Parcelas</label>
-                <input id="installments" type="number" name="installments" placeholder="Parcelas" required >
-            </div>
-
-            <div class="pay now">
-                <button><a href="#">Pagar Agora</a></button>
-            </div>
-        </form>
+                <div class="pay-now">
+                    <img src="assets/images/point-of-sale-24px.svg" alt="pagar">
+                    <button type="button" name="pay-now" id="pay-now" required>Pagar Agora</button>
+                </div>
+            </form>
+        </section>    
     </main>
 </body>
 </html>

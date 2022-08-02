@@ -17,3 +17,11 @@ body {
     background-image: url("../images/clipboard-backgrond-mobile.png");
     background-color: var(--red-1);
 }
+body#mask {
+    background-image: url("../images/clipboard-backgrond-mobile.png");
+    background-color: var(--red-1);
+}
+
+body#black {
+    background-color: var(--black-3);
+}

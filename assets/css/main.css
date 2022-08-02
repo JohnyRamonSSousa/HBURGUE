@@ -71,11 +71,42 @@ body {
   background-color: var(--red-1);
 }
 
+body#mask {
+  background-image: url("../images/clipboard-backgrond-mobile.png");
+  background-color: var(--red-1);
+}
+
+body#black {
+  background-color: var(--black-3);
+}
+
 #header {
   margin: 43px auto 122px auto;
 }
 #header .logo-desktop {
   display: none;
+}
+
+#header-pay {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 368px;
+  background: linear-gradient(180deg, rgba(7, 13, 13, 0.5019607843) 50%, #070D0D 100%), url("../images/burguer-mobile.png");
+  background-size: cover;
+}
+#header-pay .logo {
+  width: 220px;
+  height: 200px;
+  margin-top: 43px;
+  background-image: url("../images/logo-mobile.svg");
+  background-repeat: no-repeat;
+}
+#header-pay .img-user {
+  position: absolute;
+  right: 0;
 }
 
 @media (min-width: 1440px) {
@@ -89,6 +120,45 @@ body {
     display: flex;
   }
 }
+#header-makeburguer {
+  display: flex;
+  justify-content: center;
+}
+#header-makeburguer a {
+  margin: 43px auto 122px auto;
+}
+#header-makeburguer .logo-desktop {
+  display: none;
+}
+
+#header.image {
+  background-image: url("/assets/images/burguer-mobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#header.image #overlay {
+  background-color: var(--black-opacity-0);
+  width: 100%;
+  position: relative;
+}
+#header.image #overlay a {
+  margin: 45px auto 122px auto;
+}
+#header.image #overlay div {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#header.image #overlay div picture a {
+  margin: 0;
+}
+#header.image #overlay div picture a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 #home {
   min-height: calc(100vh - 400px);
   width: 100%;
@@ -393,37 +463,375 @@ body {
   color: var(--white-0);
 }
 
-.body {
-  width: 100%;
-  height: 100vh;
-}
-
-.pay {
-  width: 100%;
-  height: 83px;
-  color: white;
-  background-color: var(--black-1);
-}
-.pay h1 {
-  font-size: 32px;
-  margin-top: 21px;
-  position: absolute;
-  left: 90px;
+.app-body {
+  position: relative;
   display: flex;
-  text-align: center;
-}
-
-#playment {
-  width: 100%;
-  height: 100vh;
-}
-#playment .form {
-  width: 360px;
-  height: 50px;
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.app-body .payment {
+  position: relative;
+  display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 368px);
+  background-color: var(--white-0);
+}
+.app-body .payment > div {
+  width: 100%;
+  height: 80px;
+  background: #202525;
+  align-items: center;
+  justify-content: center;
+}
+.app-body .payment > div h1 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--white-0);
+}
+.app-body form {
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 26px;
+  padding-bottom: 100px;
+}
+.app-body form input {
+  width: 360px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  border: 1px solid #D7D7D7;
+  border-radius: 10px;
+  padding-left: 18px;
+}
+.app-body form label {
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  top: 16px;
+  left: 15px;
+  color: var(--black-opacity-0);
+}
+.app-body form .field {
+  position: relative;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.app-body form .pay-field {
+  position: relative;
+  flex-direction: row;
+  flex: content;
+  padding-bottom: 10px;
+  width: 265px;
+  height: 50px;
+}
+.app-body form .pay-field div {
+  position: relative;
+  flex-direction: column;
+}
+.app-body form .pay-field input {
+  width: 172px;
+  height: 50px;
+}
+.app-body form .pay-field .pay-field-1 {
+  padding-left: 15px;
+}
+.app-body .pay-now {
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 64px;
+  bottom: 0px;
+  background: var(--red-0);
+  left: 0;
+}
+.app-body .pay-now > button {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 50px;
+  background: var(--red-0);
+  border: none;
+  color: var(--white-0);
+  background: var(--red-0);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+.app-body .pay-now > img {
+  width: auto;
+}
+
+#makeburger {
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  flex-direction: column;
+}
+#makeburger .title {
+  background-color: var(--white-opacity-1);
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+#makeburger .title h1 {
+  color: var(--white-0);
+  font-weight: 400;
+  font-size: 32px;
+}
+#makeburger .title h1.different-color {
+  color: var(--red-0);
+  margin-left: 8px;
+}
+#makeburger .options {
+  flex-direction: column;
+  margin: 0 35px;
+}
+#makeburger .options .bread-options {
+  flex-direction: column;
+  margin-top: 31px;
+}
+#makeburger .options .bread-options > span {
+  color: var(--white-0);
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+#makeburger .options .bread-options label {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+#makeburger .options .bread-options label .square {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border: var(--red-opacity-1) 1px solid;
+  justify-content: center;
+  align-items: center;
+}
+#makeburger .options .bread-options label .square > div {
+  width: 22px;
+  height: 22px;
+  background-color: var(--red-4);
+}
+#makeburger .options .bread-options label input {
+  display: none;
+}
+#makeburger .options .bread-options label input:checked + .square > div {
+  opacity: 1;
+  background: var(--red-4);
+}
+#makeburger .options .bread-options label .content {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: var(--red-opacity-1) 1px dotted;
+  padding-bottom: 6px;
+  margin-left: 12px;
+}
+#makeburger .options .bread-options label .content > span {
+  color: var(--red-opacity-1);
+  font-weight: 500;
+  font-size: 16px;
+}
+#makeburger .options .ingredients-options {
+  flex-direction: column;
+  margin-top: 20px;
+}
+#makeburger .options .ingredients-options > span {
+  color: var(--white-0);
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+#makeburger .options .ingredients-options label {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+#makeburger .options .ingredients-options label .square {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border: var(--red-opacity-1) 1px solid;
+  justify-content: center;
+  align-items: center;
+}
+#makeburger .options .ingredients-options label .square > div {
+  width: 22px;
+  height: 22px;
+  background-color: var(--red-4);
+}
+#makeburger .options .ingredients-options label input {
+  display: none;
+}
+#makeburger .options .ingredients-options label input:checked + .square > div {
+  opacity: 1;
+  background: var(--red-4);
+}
+#makeburger .options .ingredients-options label .content {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: var(--red-opacity-1) 1px dotted;
+  padding-bottom: 6px;
+  margin-left: 12px;
+}
+#makeburger .options .ingredients-options label .content > span {
+  color: var(--red-opacity-1);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#summary {
+  background-color: var(--white-0);
+  height: 64px;
+  width: 100%;
+  min-width: 320px;
+}
+#summary header {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 213px;
+  display: flex;
+  flex: 1;
+}
+#summary header .tray {
+  width: 32px;
+  margin-left: 19px;
+  margin-right: 15px;
+  border: none;
+  background: none;
+}
+#summary header > div {
+  flex-direction: column;
+  justify-content: center;
+}
+#summary header > div small {
+  font-weight: 400;
+  font-size: 10px;
+}
+#summary header > div span {
+  font-weight: bold;
+  font-size: 10px;
+}
+#summary .content {
+  display: none;
+}
+#summary footer .price {
+  flex-direction: column;
+  width: 137px;
+  background-color: var(--gray-1);
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 22px;
+}
+#summary footer .price small {
+  font-weight: 400;
+  font-size: 24px;
+}
+#summary footer .price span {
+  font-weight: 400;
+  font-size: 10px;
+  opacity: 70%;
+}
+#summary footer .payment {
+  height: 64px;
+  width: 64px;
+  background-color: var(--red-0);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#summary footer .payment .pay {
+  height: 24px;
+  width: 24px;
+  background: none;
+  border: none;
+  outline: none;
+}
+#summary footer .payment span {
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--white-0);
+}
+
+@media (min-width: 1440px) {
+  #header.image,
+#makeburger {
+    width: calc(100vw - 400px);
+  }
+  #header.image .title,
+#makeburger .title {
+    justify-content: flex-start;
+    padding-left: 110px;
+  }
+  #header.image .options,
+#makeburger .options {
+    flex-direction: column;
+    margin: 0 35px;
+    width: 414px;
+  }
+  #summary {
+    width: 400px;
+    height: 100vh;
+    right: 0;
+    position: fixed;
+    flex-direction: column;
+  }
+  #summary header {
+    height: 105px;
+    width: 100%;
+  }
+  #summary header .tray {
+    width: 64px;
+    margin-left: 19px;
+    margin-right: 15px;
+    border: none;
+    background: none;
+  }
+  #summary header > div small {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  #summary header > div span {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  #summary .content {
+    height: calc(100vh - 169px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 35px;
+  }
+  #summary .content > div {
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: var(--black-3) 1px dotted;
+  }
+  #summary .content > div span {
+    color: var(--black-3);
+    font-weight: 500;
+    font-size: 16px;
+  }
+  #summary footer {
+    height: 64px;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
