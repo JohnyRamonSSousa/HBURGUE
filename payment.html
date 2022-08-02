@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hburger</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#E1DEDD" />
+    <meta name="msapplication-TileImage" content="assets/images/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#E1DEDD" />
+    <meta name="description" content="Conheça o Hburger" />
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+</head>
+
+<body>
+    <header id="header">
+        <a href="payment.html#home"><img src="assets/images/logo-mobile.svg" alt="Logo Hburger" class="logo-mobile" /><img src="assets/images/logo-desktop.svg" alt="Logo Hburger" class="logo-desktop" /></a>
+    </header>
+
+    <div class="pay">
+        <h1>Pagamento</h1>
+    </div>
+    <main id="payment">
+        <form>
+
+            <div class="field">
+                <label for="card number">Número do cartão</label>
+                <input id="card number" type="number" name="card number" placeholder="Número do cartão" required >
+            </div>
+            <div class="field">
+                <label for="validity">Validade</label>
+                <input id="validity" type="number" name="validity" placeholder="Validade" required >
+            </div>
+            <div class="field">
+                <label for="security code">Código de Segurança</label>
+                <input id="security code" type="number" name="security code" placeholder="Código de Segurança" required >
+            </div>
+            <div class="field">
+                <label for="name">Nome</label>
+                <input id="name" type="text" name="name" placeholder="Nome" required >
+            </div>
+            <div class="field">
+                <label for="Emitting bank">Banco Emissor</label>
+                <input id="Emitting bank" type="text" name="Emitting bank" placeholder="Banco Emissor" required >
+            </div>
+            <div class="field">
+                <label for="installments">Parcelas</label>
+                <input id="installments" type="number" name="installments" placeholder="Parcelas" required >
+            </div>
+
+            <div class="pay now">
+                <button><a href="#">Pagar Agora</a></button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

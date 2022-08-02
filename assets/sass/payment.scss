@@ -1,0 +1,32 @@
+.body{
+    width: 100%;
+    height: 100vh;
+}
+.pay {
+    width: 100%;
+    height: 83px;
+    color: white;
+    background-color: var(--black-1);
+    h1 {
+        font-size: 32px;
+        margin-top: 21px;
+        position: absolute;
+        left: 90px;
+        display: flex;
+        text-align: center;
+    }
+}
+
+#playment {
+    width: 100%;
+    height: 100vh;
+    .form{
+        width:360px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+

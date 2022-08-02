@@ -1,0 +1,429 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light"), url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Regular"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium"), url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black"), url("../fonts/Roboto-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+:root {
+  --black-0: #000000;
+  --black-1: #1F2525;
+  --black-2: #101D1D;
+  --black-3: #070D0D;
+  --black-4: #0C0B0B;
+  --black-opacity-0: #1F252580;
+  --gray-0: #D7D7D7;
+  --gray-1: #E3E3E3;
+  --orange-0: #FF760C;
+  --red-0: #DD0E0E;
+  --red-1: #250303;
+  --red-2: #3A1C1C;
+  --red-3: #921515;
+  --red-4: #B43D3D;
+  --red-opacity-0: #DD0E0E8A;
+  --red-opacity-1: #FF525280;
+  --white-0: #FFFFFF;
+  --white-opacity-0: #FFFFFF47;
+  --white-opacity-1: #FFFFFF1A;
+  --yellow-opacity-0: #F6BC1BB3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+body, div, article, aside, form, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr, span {
+  display: flex;
+}
+
+body {
+  flex-direction: column;
+  background-image: url("../images/clipboard-backgrond-mobile.png");
+  background-color: var(--red-1);
+}
+
+#header {
+  margin: 43px auto 122px auto;
+}
+#header .logo-desktop {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  #header {
+    margin: 75px auto 130px auto;
+  }
+  #header .logo-mobile {
+    display: none;
+  }
+  #header .logo-desktop {
+    display: flex;
+  }
+}
+#home {
+  min-height: calc(100vh - 400px);
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#home .acess {
+  display: inline;
+  position: relative;
+}
+#home .acess .register .login {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-0);
+  border: 1px solid var(--red-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#home .acess .register .registration {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-opacity-0);
+  border: 1px solid var(--red-opacity-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#home .acess .fields {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 52px;
+  background-color: var(--red-0);
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid var(--red-0);
+}
+#home .acess .fields .field {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 10px;
+}
+#home .acess .fields .field input {
+  width: 280px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 10px;
+  color: var(--black-0);
+  border: 0;
+  background-color: var(--white-0);
+}
+#home .acess .fields .field label {
+  position: absolute;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  left: 20px;
+}
+#home .acess .actions {
+  margin-top: 10px;
+  position: absolute;
+  justify-content: space-between;
+  align-items: flex-start;
+  left: 35px;
+  right: 35px;
+  bottom: -10px;
+}
+#home .acess .actions div {
+  padding: 0px 50px 0px 0px;
+}
+#home .acess .actions div a {
+  color: var(--white-0);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+#home .acess .actions button {
+  min-width: 110px;
+  border: none;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--black);
+  background-color: var(--black-2);
+  color: var(--white-0);
+}
+
+#forgot-password {
+  min-height: calc(100vh - 400px);
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#forgot-password .acess {
+  display: inline;
+  position: relative;
+}
+#forgot-password .acess .register .login {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-opacity-0);
+  border: 1px solid var(--red-opacity-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#forgot-password .acess .register .registration {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-opacity-0);
+  border: 1px solid var(--red-opacity-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#forgot-password .acess .fields {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 43px;
+  background-color: var(--red-0);
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid var(--red-0);
+  position: relative;
+}
+#forgot-password .acess .fields span {
+  position: absolute;
+  left: 35px;
+  bottom: 120px;
+  color: var(--white-0);
+}
+#forgot-password .acess .fields .field {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 10px;
+}
+#forgot-password .acess .fields .field input {
+  width: 280px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 10px;
+  color: var(--black-0);
+  border: 0;
+  background-color: var(--white-0);
+}
+#forgot-password .acess .fields .field label {
+  position: absolute;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  left: 20px;
+}
+#forgot-password .acess .actions {
+  margin-top: 10px;
+  position: absolute;
+  right: 35px;
+  bottom: -10px;
+}
+#forgot-password .acess .actions button {
+  min-width: 110px;
+  border: none;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--black);
+  background-color: var(--black-2);
+  color: var(--white-0);
+}
+
+#registration {
+  min-height: calc(100vh - 400px);
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#registration .acess {
+  display: inline;
+  position: relative;
+}
+#registration .acess .register .login {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-opacity-0);
+  border: 1px solid var(--red-opacity-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#registration .acess .register .registration {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-0);
+  border: 1px solid var(--red-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#registration .acess .fields {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 43px;
+  background-color: var(--red-0);
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid var(--red-0);
+}
+#registration .acess .fields .field {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 10px;
+}
+#registration .acess .fields .field input {
+  width: 280px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 10px;
+  color: var(--black-0);
+  border: 0;
+  background-color: var(--white-0);
+}
+#registration .acess .fields .field label {
+  position: absolute;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  left: 20px;
+}
+#registration .acess .actions {
+  margin-top: 10px;
+  position: absolute;
+  right: 35px;
+  bottom: -10px;
+}
+#registration .acess .actions button {
+  min-width: 110px;
+  border: none;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--black);
+  background-color: var(--black-2);
+  color: var(--white-0);
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+}
+
+.pay {
+  width: 100%;
+  height: 83px;
+  color: white;
+  background-color: var(--black-1);
+}
+.pay h1 {
+  font-size: 32px;
+  margin-top: 21px;
+  position: absolute;
+  left: 90px;
+  display: flex;
+  text-align: center;
+}
+
+#playment {
+  width: 100%;
+  height: 100vh;
+}
+#playment .form {
+  width: 360px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=main.css.map */
